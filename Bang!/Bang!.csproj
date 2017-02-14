@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1DB2876-5F4D-44A3-BE49-0F54B54255A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bang_</RootNamespace>
+    <AssemblyName>Bang!</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\HerniServer.cs">
+    </Compile>
+    <Compile Include="Server\HracSeOdpojilException.cs" />
+    <Compile Include="Spolecne\DialogHlaska.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Server\Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Server.Designer.cs">
+      <DependentUpon>Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spolecne\Hra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spolecne\Hra.Designer.cs">
+      <DependentUpon>Hra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spolecne\HraPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Spolecne\Karty\CisloKarty.cs" />
+    <Compile Include="Spolecne\Karty\FunkceKarta.cs">
+    </Compile>
+    <Compile Include="Spolecne\Karty\Karta.cs">
+    </Compile>
+    <Compile Include="Spolecne\Karty\KartaHneda.cs" />
+    <Compile Include="Spolecne\Karty\KartaImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Spolecne\Karty\KartaModra.cs" />
+    <Compile Include="Spolecne\Karty\KartaObrazek.cs" />
+    <Compile Include="Spolecne\Karty\ListKaret.cs">
+    </Compile>
+    <Compile Include="Spolecne\Karty\MyEventArgs.cs" />
+    <Compile Include="Spolecne\Karty\PostavaKarta.cs">
+    </Compile>
+    <Compile Include="Spolecne\Karty\PozorovatelBalickuKaret.cs" />
+    <Compile Include="Spolecne\Nastaveni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spolecne\Nastaveni.Designer.cs">
+      <DependentUpon>Nastaveni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spolecne\Spojeni.cs" />
+    <Compile Include="Spolecne\Transit.cs" />
+    <Compile Include="Spolecne\TransitObsah.cs" />
+    <Compile Include="Spolecne\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spolecne\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Client\Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spolecne\DialogHlaska.resx">
+      <DependentUpon>DialogHlaska.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Server\Server.resx">
+      <DependentUpon>Server.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spolecne\Hra.resx">
+      <DependentUpon>Hra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spolecne\Nastaveni.resx">
+      <DependentUpon>Nastaveni.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spolecne\Welcome.cs-CZ.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spolecne\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\favicon.ico" />
+    <Content Include="Resources\karty\Apalosa%28Apik%29.png" />
+    <Content Include="Resources\karty\Bang%2810kar%29.png" />
+    <Content Include="Resources\karty\Bang%283kar%29.png" />
+    <Content Include="Resources\karty\Bang%283kri%29.png" />
+    <Content Include="Resources\karty\Bang%285kri%29.png" />
+    <Content Include="Resources\karty\Bang%286kri%29.png" />
+    <Content Include="Resources\karty\Bang%287kri%29.png" />
+    <Content Include="Resources\karty\Bang%289kar%29.png" />
+    <Content Include="Resources\karty\Bang%28Akar%29.png" />
+    <Content Include="Resources\karty\Bang%28Asrd%29.png" />
+    <Content Include="Resources\karty\Bang%28Jkar%29.png" />
+    <Content Include="Resources\karty\Bang%28Ksrd%29.png" />
+    <Content Include="Resources\karty\Bang%28Qsrd%29.png" />
+    <Content Include="Resources\karty\Barel%28Qpik%29.png" />
+    <Content Include="Resources\karty\CatBalou%289kar%29.png" />
+    <Content Include="Resources\karty\CatBalou%28Ksrd%29.png" />
+    <Content Include="Resources\karty\Dostavnik%289pik%29.png" />
+    <Content Include="Resources\karty\Duel%28Jpik%29.png" />
+    <Content Include="Resources\karty\Duel%28Qkar%29.png" />
+    <Content Include="Resources\karty\Dynamit%282srd%29.png" />
+    <Content Include="Resources\karty\Hokynarstvi%28Qpik%29.png" />
+    <Content Include="Resources\karty\Indiani%28Kkar%29.png" />
+    <Content Include="Resources\karty\Indiani%28Akar%29.png" />
+    <Content Include="Resources\karty\Kulomet%2810srd%29.png" />
+    <Content Include="Resources\karty\Panika%288kar%29.png" />
+    <Content Include="Resources\karty\Panika%28Asrd%29.png" />
+    <Content Include="Resources\karty\Panika%28Jsrd%29.png" />
+    <Content Include="Resources\karty\Pivo%2810srd%29.png" />
+    <Content Include="Resources\karty\Pivo%287srd%29.png" />
+    <Content Include="Resources\karty\Pivo%289srd%29.png" />
+    <Content Include="Resources\karty\Pivo%28Jsrd%29.png" />
+    <Content Include="Resources\karty\salon%285srd%29.png" />
+    <Content Include="Resources\karty\Scofield%28Jkri%29.png" />
+    <Content Include="Resources\karty\Vedle%2810kri%29.png" />
+    <Content Include="Resources\karty\Vedle%282pik%29.png" />
+    <Content Include="Resources\karty\Vedle%283pik%29.png" />
+    <Content Include="Resources\karty\Vedle%284pik%29.png" />
+    <Content Include="Resources\karty\Vedle%287pik%29.png" />
+    <Content Include="Resources\karty\Vedle%288pik%29.png" />
+    <Content Include="Resources\karty\Vedle%28Jkri%29.png" />
+    <Content Include="Resources\karty\Vedle%28Qkri%29.png" />
+    <Content Include="Resources\karty\Vezeni%2810pik%29.png" />
+    <Content Include="Resources\karty\Vezeni%284srd%29.png" />
+    <Content Include="Resources\karty\Volcanic%2810kri%29.png" />
+    <Content Include="Resources\karty\Volcanic%2810pik%29.png" />
+    <Content Include="Resources\karty\Winchester%288pik%29.png" />
+    <Content Include="Resources\specialni\Bandita.png" />
+    <Content Include="Resources\specialni\Bangzezadu.png" />
+    <Content Include="Resources\specialni\Odpadlik.png" />
+    <Content Include="Resources\specialni\Patrony.png" />
+    <Content Include="Resources\specialni\PostavaZezadu.png" />
+    <Content Include="Resources\specialni\Sherif.png" />
+    <Content Include="Resources\specialni\Vice.png" />
+    <Content Include="Resources\specialni\Vice2.png" />
+    <Content Include="Resources\karty\Bang%282kar%29.png" />
+    <Content Include="Resources\karty\Bang%282kri%29.png" />
+    <Content Include="Resources\karty\Bang%284kar%29.png" />
+    <Content Include="Resources\karty\Bang%284kriz%29.png" />
+    <Content Include="Resources\karty\Bang%285kar%29.png" />
+    <Content Include="Resources\karty\Bang%286kar%29.png" />
+    <Content Include="Resources\karty\Bang%287kar.png" />
+    <Content Include="Resources\karty\Bang%288.kri%29.png" />
+    <Content Include="Resources\karty\Bang%288kar%29.png" />
+    <Content Include="Resources\karty\Bang%289kri%29.png" />
+    <Content Include="Resources\karty\Bang%28Apik%29.png" />
+    <Content Include="Resources\karty\Bang%28Kkar%29.png" />
+    <Content Include="Resources\karty\Bang%28Qkar%29.png" />
+    <Content Include="Resources\karty\Barel%28Kpik%29.png" />
+    <Content Include="Resources\karty\CatBalou%2810kar%29.png" />
+    <Content Include="Resources\karty\CatBalou%28Jkar%29.png" />
+    <Content Include="Resources\karty\Dostavnik%283srd%29.png" />
+    <Content Include="Resources\karty\Duel%288kriz%29.png" />
+    <Content Include="Resources\karty\Hokynarstvi%289kri%29.png" />
+    <Content Include="Resources\karty\Mustang%288srd%29.png" />
+    <Content Include="Resources\karty\Mustang%289srd%29.png" />
+    <Content Include="Resources\karty\Panika%28Qsrd%29.png" />
+    <Content Include="Resources\karty\Pivo%286srd%29.png" />
+    <Content Include="Resources\karty\Pivo%288srd%29.png" />
+    <Content Include="Resources\karty\Remington%28Kkri%29.png" />
+    <Content Include="Resources\karty\Rev.Carabine%28Akri%29.png" />
+    <Content Include="Resources\karty\Schofield%28Kpik%29.png" />
+    <Content Include="Resources\karty\Scofield%28Qkri%29.png" />
+    <Content Include="Resources\karty\Vedle%285pik%29.png" />
+    <Content Include="Resources\karty\Vedle%286pik%29.png" />
+    <Content Include="Resources\karty\Vedle%28Akri%29.png" />
+    <Content Include="Resources\karty\Vedle%28Kkri%29.png" />
+    <Content Include="Resources\karty\Vezeni%28Jpik%29.png" />
+    <Content Include="Resources\postavy\BartCassidy.png" />
+    <Content Include="Resources\postavy\BlackJack.png" />
+    <Content Include="Resources\postavy\CalamityJanet.png" />
+    <Content Include="Resources\postavy\ElGringo.png" />
+    <Content Include="Resources\postavy\JesseJones.png" />
+    <Content Include="Resources\postavy\Jourdonnais.png" />
+    <Content Include="Resources\postavy\KitCarlson.png" />
+    <Content Include="Resources\postavy\LuckyDuke.png" />
+    <Content Include="Resources\postavy\PaulRegret.png" />
+    <Content Include="Resources\postavy\PedroRamirez.png" />
+    <Content Include="Resources\postavy\RoseDoolan.png" />
+    <Content Include="Resources\postavy\SidKetchum.png" />
+    <Content Include="Resources\postavy\SlabTheKiller.png" />
+    <Content Include="Resources\postavy\SuzyLafayette.png" />
+    <Content Include="Resources\postavy\VultureSam.png" />
+    <Content Include="Resources\postavy\WillyTheKid.png" />
+    <Content Include="Resources\welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
