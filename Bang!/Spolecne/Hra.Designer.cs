@@ -39,12 +39,12 @@
             this.btn_ZahodKarty = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.souborToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nastaveníToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uložToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nováHraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.načtiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uložToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nastaveníToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zpětToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lName1 = new System.Windows.Forms.Label();
-            this.nováHraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.KartaNahled)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +88,7 @@
             this.bKonec.Name = "bKonec";
             this.bKonec.Size = new System.Drawing.Size(190, 23);
             this.bKonec.TabIndex = 5;
-            this.bKonec.Text = "Konec kola";
+            this.bKonec.Text = "End of round";
             this.bKonec.UseVisualStyleBackColor = true;
             this.bKonec.Click += new System.EventHandler(this.bKonec_Click);
             // 
@@ -130,7 +130,7 @@
             this.btn_ZahodKarty.Name = "btn_ZahodKarty";
             this.btn_ZahodKarty.Size = new System.Drawing.Size(190, 23);
             this.btn_ZahodKarty.TabIndex = 17;
-            this.btn_ZahodKarty.Text = "Zahodit karty";
+            this.btn_ZahodKarty.Text = "Discard card(s)";
             this.btn_ZahodKarty.UseVisualStyleBackColor = true;
             this.btn_ZahodKarty.Click += new System.EventHandler(this.btn_ZahodKarty_Click);
             // 
@@ -154,35 +154,42 @@
             this.uložToolStripMenuItem,
             this.nastaveníToolStripMenuItem});
             this.souborToolStripMenuItem.Name = "souborToolStripMenuItem";
-            this.souborToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.souborToolStripMenuItem.Text = "Soubor";
+            this.souborToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.souborToolStripMenuItem.Text = "File";
             // 
-            // nastaveníToolStripMenuItem
+            // nováHraToolStripMenuItem
             // 
-            this.nastaveníToolStripMenuItem.Name = "nastaveníToolStripMenuItem";
-            this.nastaveníToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.nastaveníToolStripMenuItem.Text = "Nastavení";
-            this.nastaveníToolStripMenuItem.Click += new System.EventHandler(this.nastaveníToolStripMenuItem_Click);
-            // 
-            // uložToolStripMenuItem
-            // 
-            this.uložToolStripMenuItem.Name = "uložToolStripMenuItem";
-            this.uložToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.uložToolStripMenuItem.Text = "Uložit";
-            this.uložToolStripMenuItem.Click += new System.EventHandler(this.uložToolStripMenuItem_Click);
+            this.nováHraToolStripMenuItem.Name = "nováHraToolStripMenuItem";
+            this.nováHraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nováHraToolStripMenuItem.Text = "New game";
+            this.nováHraToolStripMenuItem.Click += new System.EventHandler(this.nováHraToolStripMenuItem_Click);
             // 
             // načtiToolStripMenuItem
             // 
             this.načtiToolStripMenuItem.Name = "načtiToolStripMenuItem";
             this.načtiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.načtiToolStripMenuItem.Text = "Načti";
+            this.načtiToolStripMenuItem.Text = "Load";
             this.načtiToolStripMenuItem.Click += new System.EventHandler(this.načtiToolStripMenuItem_Click);
+            // 
+            // uložToolStripMenuItem
+            // 
+            this.uložToolStripMenuItem.Name = "uložToolStripMenuItem";
+            this.uložToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.uložToolStripMenuItem.Text = "Save";
+            this.uložToolStripMenuItem.Click += new System.EventHandler(this.uložToolStripMenuItem_Click);
+            // 
+            // nastaveníToolStripMenuItem
+            // 
+            this.nastaveníToolStripMenuItem.Name = "nastaveníToolStripMenuItem";
+            this.nastaveníToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nastaveníToolStripMenuItem.Text = "Settings";
+            this.nastaveníToolStripMenuItem.Click += new System.EventHandler(this.nastaveníToolStripMenuItem_Click);
             // 
             // zpětToolStripMenuItem
             // 
             this.zpětToolStripMenuItem.Name = "zpětToolStripMenuItem";
-            this.zpětToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.zpětToolStripMenuItem.Text = "Zpět";
+            this.zpětToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.zpětToolStripMenuItem.Text = "Back";
             this.zpětToolStripMenuItem.Click += new System.EventHandler(this.zpětToolStripMenuItem_Click);
             // 
             // lName1
@@ -192,13 +199,6 @@
             this.lName1.Size = new System.Drawing.Size(80, 13);
             this.lName1.TabIndex = 19;
             this.lName1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // nováHraToolStripMenuItem
-            // 
-            this.nováHraToolStripMenuItem.Name = "nováHraToolStripMenuItem";
-            this.nováHraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.nováHraToolStripMenuItem.Text = "Nová hra";
-            this.nováHraToolStripMenuItem.Click += new System.EventHandler(this.nováHraToolStripMenuItem_Click);
             // 
             // Hra
             // 
@@ -220,7 +220,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Hra";
-            this.Text = "Hra";
+            this.Text = "Bang!";
             this.Resize += new System.EventHandler(this.Hra_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.KartaNahled)).EndInit();
             this.menuStrip1.ResumeLayout(false);

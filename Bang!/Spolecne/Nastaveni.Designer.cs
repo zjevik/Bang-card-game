@@ -52,7 +52,7 @@
             this.groupBox1.Size = new System.Drawing.Size(245, 325);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nastavení hudby";
+            this.groupBox1.Text = "Music settings";
             // 
             // btnSmaz
             // 
@@ -60,7 +60,7 @@
             this.btnSmaz.Name = "btnSmaz";
             this.btnSmaz.Size = new System.Drawing.Size(96, 23);
             this.btnSmaz.TabIndex = 11;
-            this.btnSmaz.Text = "Smaž ozn.";
+            this.btnSmaz.Text = "Remove";
             this.btnSmaz.UseVisualStyleBackColor = true;
             this.btnSmaz.Click += new System.EventHandler(this.btnSmaz_Click);
             // 
@@ -103,7 +103,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Vyber soubory";
+            this.button1.Text = "Select files";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -121,7 +121,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Ulož";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -134,7 +134,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Nastaveni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nastaveni";
+            this.Text = "Settings";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbHlasitost)).EndInit();
